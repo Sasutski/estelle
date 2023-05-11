@@ -1,0 +1,111 @@
+html {
+    background: linear-gradient(rgb(87, 87, 255), rgb(252, 110, 243), rgb(238, 98, 98));
+}
+a {
+    text-decoration: none;
+}
+:root {
+    --pink: hsl(251, 81%, 64%);
+    --teal: hsl(0, 100%, 61%);
+    --white: hsl(293, 100%, 58%);
+  }
+  
+body {
+background: transparent;
+padding-top: 200px;
+min-block-size: 76dvh;
+
+display: grid;
+place-items: center;
+}
+
+pre {
+--selector: var(--pink);
+--property: var(--teal);
+--punctuation: var(--white);
+--undefined: var(--white);
+min-width: 50px;
+font-size: 1.5rem;
+font-weight: bold;
+color: var(--undefined);
+background: hsl(0, 0%, 0%);
+padding: .5rem;
+padding-top: 7rem;
+padding-bottom: 9rem;
+padding-left: 3rem;
+padding-right: 3rem;
+border-radius: 5rem;
+position: relative;
+
+transform-style: preserve-3d;
+transform: perspective(5000px) rotateY(var(--rotateX)) rotateX(var(--rotateY));
+}
+
+pre > * {
+text-shadow: 0 0 0.4em currentColor;
+}
+
+pre::before,
+pre::after {
+content: "";
+position: absolute;
+border-radius: inherit;
+}
+
+/* shadow */
+pre::before {
+inset: -0.50rem;
+border-radius: inherit;
+background: linear-gradient(-45deg, hsl(316, 100%, 43%), hsl(340, 100%, 51%), hsl(341, 100%, 50%));
+z-index: -1;
+transform: translateZ(-25px);
+filter: blur(10px);
+opacity: 100%;
+}
+
+/* gradient thingy */
+pre::after {
+z-index: -2;
+inset: -1rem;
+background: linear-gradient(-45deg, hsl(316, 100%, 50%), hsl(340, 100%, 50%), hsl(341, 100%, 50%));
+transform: translateZ(-50px);
+}
+
+.selector {
+color: var(--selector);
+}
+
+.property {
+color: var(--property);
+}
+
+.punctuation {
+color: var(--punctuation);
+}
+
+.property + .punctuation {
+color: var(--property);
+}
+
+.click-the-code {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+    color: aliceblue;
+}
+
+.rights {
+    background: transparent;
+    padding-top: 75px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+    color: aliceblue;
+}
