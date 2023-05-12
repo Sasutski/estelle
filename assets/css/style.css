@@ -1,5 +1,12 @@
 html {
     background: linear-gradient(rgb(87, 87, 255), rgb(252, 110, 243), rgb(238, 98, 98));
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000000;
+    min-block-size: 100dvh;
 }
 a {
     text-decoration: none;
@@ -12,13 +19,21 @@ a {
   
 body {
 background: transparent;
-padding-top: 200px;
-min-block-size: 76dvh;
+padding-top: 30px;
+min-block-size: 90dvh;
 
 display: grid;
 place-items: center;
 }
-
+.about-body {
+    background: transparent;
+    padding-top: 20px;
+    min-block-size: 76dvh;
+    
+    display: grid;
+    place-items: center;
+    }
+    
 pre {
 --selector: var(--pink);
 --property: var(--teal);
@@ -98,6 +113,34 @@ color: var(--property);
     color: aliceblue;
 }
 
+.animate-charcter
+{
+  padding-top: -100px;
+  background-image: linear-gradient(
+    -225deg,
+    #00ffa6 0%,
+    #00ffbf 29%,
+    #00eeff 67%,
+    #001eff 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 190px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
 .rights {
     background: transparent;
     padding-top: 75px;
@@ -106,6 +149,18 @@ color: var(--property);
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 4px;
-    position: relative;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     color: aliceblue;
 }
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+  }
